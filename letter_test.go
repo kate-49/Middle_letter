@@ -13,4 +13,13 @@ func TestReturnsMiddleLetter(t *testing.T) {
 		}
 	})
 
+	t.Run("Even value letters", func(t *testing.T) {
+		got := getMiddle("test")
+		want := "es"
+
+		if got != want {
+			t.Errorf("got %s, wanted %s", got, want)
+		}
+	})
+
 }
