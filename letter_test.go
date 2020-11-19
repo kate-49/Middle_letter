@@ -3,10 +3,10 @@ package letter
 import "testing"
 
 func TestReturnsMiddleLetter(t *testing.T) {
-	got := getMiddle("test")
-	want := "es"
+	got := getMiddle("testing")
+	want := "t"
 
 	if got != want {
-		t.Errorf("expected %s, got %s", got, want)
+		t.Errorf("got %s, wanted %s", got, want)
 	}
 }
