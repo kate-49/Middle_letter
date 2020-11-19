@@ -2,18 +2,7 @@ package letter
 
 import "testing"
 
-func TestReturnsMiddleLetter(t *testing.T) {
-
-	t.Run("Odd value letters", func(t *testing.T) {
-		got := getMiddle("A")
-		want := "A"
-
-		if got != want {
-			t.Errorf("got %s, wanted %s", got, want)
-		}
-	})
-}
-func TestEvenValueLetters(t *testing.T) {
+func TestAcceptanceCriteria(t *testing.T) {
 	tests := []struct {
 		input string
 		want  string
@@ -21,6 +10,8 @@ func TestEvenValueLetters(t *testing.T) {
 		// even tests
 		{input: "test", want: "es"},
 		{input: "middle", want: "dd"},
+		//odd tests
+		{input: "testing", want: "t"},
 		// edgecases tests
 		{input: "A", want: "A"},
 		{input: "of", want: "of"},
