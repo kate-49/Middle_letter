@@ -5,8 +5,8 @@ import "testing"
 func TestReturnsMiddleLetter(t *testing.T) {
 
 	t.Run("Odd value letters", func(t *testing.T) {
-		got := getMiddle("testing")
-		want := "t"
+		got := getMiddle("A")
+		want := "A"
 
 		if got != want {
 			t.Errorf("got %s, wanted %s", got, want)
@@ -18,9 +18,12 @@ func TestEvenValueLetters(t *testing.T) {
 		input string
 		want  string
 	}{
-		// acceptance criteria tests
+		// even tests
 		{input: "test", want: "es"},
 		{input: "middle", want: "dd"},
+		// edgecases tests
+		{input: "A", want: "A"},
+		{input: "of", want: "of"},
 	}
 
 	for _, tc := range tests {
